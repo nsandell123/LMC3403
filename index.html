@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber Safety Tips</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <h1>Cyber Safety Tips</h1>
+        <p>Practical advice for staying secure online</p>
+    </header>
+
+    <section class="poster">
+        <h2>Explore Our Cyber Safety Visual Guide</h2>
+        <img src="test.png" alt="Cyber Safety Tips Poster">
+    </section>
+
+    <section class="content">
+        <h2>How to Set Up MFA with Duo</h2>
+        <p>Multi-Factor Authentication (MFA) adds an extra layer of security. Follow these steps to set it up:</p>
+        <ol>
+            <li>Log into your Georgia Tech account.</li>
+            <li>Go to the "Security Settings" section.</li>
+            <li>Enable Duo Mobile and follow the instructions to link your phone.</li>
+        </ol>
+    </section>
+
+    <section class="content alternate">
+        <h2>Case Study: Australian National University (ANU) Breach</h2>
+        <p>In 2018, the Australian National University (ANU) experienced a sophisticated cyberattack where hackers accessed 19 years' worth of sensitive personal data, including names, birth dates, addresses, and phone numbers. The attack required no user interaction, relying on advanced techniques to bypass defenses and remain undetected for months. This incident highlights the vulnerabilities academic institutions face due to the volume of sensitive data they manage and the importance of robust cybersecurity measures to prevent such breaches.</p>
+        <p><strong>Citation (APA Style):</strong><br>
+        Australian Broadcasting Corporation. (2019, October 2). The sophisticated ANU hack that compromised private details. <em>ABC News</em>. Retrieved from <a href="https://www.abc.net.au/news/2019-10-02/the-sophisticated-anu-hack-that-compromised-private-details/11566540" target="_blank">https://www.abc.net.au/news/2019-10-02/the-sophisticated-anu-hack-that-compromised-private-details/11566540</a></p>
+    </section>
+
+    <section class="content">
+        <h2>Spot Phishing Attempts</h2>
+        <p>Watch for the following signs of phishing:</p>
+        <ul>
+            <li>Emails from unknown senders.</li>
+            <li>Urgent requests for personal information.</li>
+            <li>Poor grammar or spelling mistakes.</li>
+            <li>Links that lead to fake websites.</li>
+        </ul>
+    </section>
+
+    <section class="quiz">
+        <h2>Test Your Cyber Safety Knowledge</h2>
+        <form id="quiz-form">
+            <div class="question">
+                <p>1. What is a common sign of a phishing email?</p>
+                <input type="radio" id="q1a" name="q1" value="a">
+                <label for="q1a">A. Personalized greeting</label><br>
+                <input type="radio" id="q1b" name="q1" value="b">
+                <label for="q1b">B. Urgent request for personal information</label><br>
+                <input type="radio" id="q1c" name="q1" value="c">
+                <label for="q1c">C. Well-written content</label>
+            </div>
+
+            <div class="question">
+                <p>2. What should you do if you receive a suspicious email?</p>
+                <input type="radio" id="q2a" name="q2" value="a">
+                <label for="q2a">A. Ignore it</label><br>
+                <input type="radio" id="q2b" name="q2" value="b">
+                <label for="q2b">B. Forward it to your IT department</label><br>
+                <input type="radio" id="q2c" name="q2" value="c">
+                <label for="q2c">C. Respond to the sender</label>
+            </div>
+
+            <div class="question">
+                <p>3. What is a strong password?</p>
+                <input type="radio" id="q3a" name="q3" value="a">
+                <label for="q3a">A. A password that is easy to remember</label><br>
+                <input type="radio" id="q3b" name="q3" value="b">
+                <label for="q3b">B. A password that is 12 characters long</label><br>
+                <input type="radio" id="q3c" name="q3" value="c">
+                <label for="q3c">C. A password that includes a mix of letters, numbers, and symbols</label>
+            </div>
+
+            <div class="question">
+                <p>4. What is the best way to protect your personal information online?</p>
+                <input type="radio" id="q4a" name="q4" value="a">
+                <label for="q4a">A. Using the same password for all your accounts</label><br>
+                <input type="radio" id="q4b" name="q4" value="b">
+                <label for="q4b">B. Not sharing your personal information online</label><br>
+                <input type="radio" id="q4c" name="q4" value="c">
+                <label for="q4c">C. Using a password manager</label>
+            </div>
+
+            <button type="button" onclick="checkAnswers()">Submit</button>
+        </form>
+        <p id="quiz-result"></p>
+    </section>
+
+    <script>
+        function checkAnswers() {
+            const answers = {
+                q1: 'b',
+                q2: 'b',
+                q3: 'c',
+                q4: 'c'
+            };
+
+            let score = 0;
+            const form = document.getElementById('quiz-form');
+            const result = document.getElementById('quiz-result');
+
+            for (let question in answers) {
+                const userAnswer = form.elements[question].value;
+                if (userAnswer === answers[question]) {
+                    score++;
+                }
+            }
+
+            result.textContent = `You scored ${score} out of ${Object.keys(answers).length}.`;
+        }
+    </script>
+
+    <section class="content alternate">
+        <h2>Creating a Strong Password: Do’s and Don’ts</h2>
+        <div class="password-tips">
+            <div>
+                <h3>Do’s</h3>
+                <ul>
+                    <li>Use a mix of letters, numbers, and symbols.</li>
+                    <li>Create passwords at least 12 characters long.</li>
+                    <li>Use a password manager.</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Don’ts</h3>
+                <ul>
+                    <li>Reuse passwords across sites.</li>
+                    <li>Include personal details like your name.</li>
+                    <li>Write passwords down in insecure locations.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="content">
+        <h2>Cybersecurity Resources</h2>
+        <p>Explore these resources to learn more:</p>
+        <ul>
+            <li><a href="#">Password Manager Guide</a></li>
+            <li><a href="#">Georgia Tech Cybersecurity Center</a></li>
+            <li><a href="#">Free Online Security Training</a></li>
+        </ul>
+        <p>Join us at Klaus 1443 for a workshop on December 2nd at 8:00 AM!</p>
+    </section>
+
+    <footer class="footer">
+        <p>© 2024 Cyber Safety Tips | Designed for LMC 3403</p>
+    </footer>
+</body>
+</html>
