@@ -90,3 +90,9 @@ footer {
 .poster {
     text-align: center;
 }
+
+.purpose-title {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    text-align: center;
+}
